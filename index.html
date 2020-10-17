@@ -34,24 +34,15 @@ function random(){
 <div id="dice"></div>
 
 <div id="buttons">
-<script type="text/javascript" src="https://cdn.rawgit.com/alexgibson/shake.js/master/shake.js"></script>
 <script>
 rollDice();
-var shakeEvent = new Shake({threshold: 15});
-shakeEvent.start();
-window.addEventListener('shake', function(){rollDice()});
-if(("ondevicemotion" in window)){
-    document.getElementById("buttons").innerHTML = "";
-    window.addEventListener('click', function(){reduceDice();});
-}
-
 </script>
     <button type="button" class = "button" id="roll" onclick="rollDice()">Roll dice</button>
     <button type="button" class = "button" id="reduce" onclick="reduceDice()">Lose a dice</button>
 </div>
 <style>
 .button {
-  background-color: #4CAF50; /* Green */
+  background-color: #000000;
   border: none;
   color: white;
   padding: 15px 32px;
