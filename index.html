@@ -50,18 +50,6 @@ function checkForShake(){
 <div id="buttons">
 <script>
 rollDice();
-if(isMobile){
-    setInterval(checkForShake, 1);
-    window.addEventListener("click",reduceDice);
-    var acl = new Accelerometer({frequency: 60});
-    acl.addEventListener('reading', () => {
-        if(acl.x + acl.y + acl.z > 10){
-            rollDice();
-        }
-    });
-    acl.start();
-    document.getElementById("buttons").innerHTML = "";
-}
 
 </script>
     <button type="button" class = "button" id="roll" onclick="rollDice()">Roll dice</button>
